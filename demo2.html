@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Click" onclick="Distrub()">
+    <script>
+        function Distrub(){
+           alert("plese clock on ok  button");
+        }
+        function DoSomething(){
+            console.log("After clicking alert");
+        }
+    </script>
+    <script>
+        console.log("From another console");
+        var queno = window.setInterval(DoSomething,1000);
+       // console.log(queno);
+        console.log("Last process");
+    </script>
+    
+</body>
+</html>

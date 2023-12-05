@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Start" onclick="start()">
+    <input type="button" value="Stop" onclick="stop()">
+    <input type="button" value="Alert" onclick="distrub()">
+
+    <div style="height: 200px;width: 200px;background: blueviolet;
+    text-align: center; " 
+
+    id="mydiv"
+    >
+
+    </div>
+        
+    
+    <script>
+        var counter = 0;
+        var qeues = new Array ();
+        function keepCounting(){
+        counter = counter + 1;
+        var refToDiv= document.getElementById("mydiv");
+        refToDiv.innerText=counter;
+        }
+        function start(){
+          var qeuesNo = window.setInterval(keepCounting,2000);
+          console.log("Start the Quese with no" + qeuesNo);
+         qeues.push(qeuesNo);
+        }
+        function stop(){
+           var qeuesToStop = qeues.pop();
+           
+            console.log("Stoop the  qeues with no " + qeuesToStop);
+            window.clearInterval(qeuesToStop);
+            
+
+        }
+
+        function distrub(){
+            alert("Qeue Hila dala na.....!")
+        }
+    </script>
+</body>
+</html>

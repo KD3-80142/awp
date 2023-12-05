@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Start" onclick="start()">
+    <input type="button" value="stop" onclick="stop()">
+</br></br>
+   
+</br></br>
+<img src="https://i.pinimg.com/originals/5a/7a/8f/5a7a8f9f4ddd07ff98cb69a23465b0b5.gif"
+      style="height: 200px ;
+    width: 200px; position: absolute;top: 90px; z-index: 5;" id="hanuman" >
+    <img src="https://plus.unsplash.com/premium_photo-1669131388906-2179e2b8a439?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8c2VhfGVufDB8fDB8fHww"
+    style="width: 5000px; height: 350px;; position: absolute;left: 0px;"
+        >
+
+    <script>
+        var counter = 0;
+        var tokenarray = new Array ();
+        function keep(){
+            counter = counter + 1;
+            var tohanuman = document.getElementById("hanuman");
+            tohanuman.style.left= counter + "px";
+        }
+        function start(){
+            var token = window.setInterval(keep,100);
+            tokenarray.push(token);
+        }
+        function stop(){
+            var token = tokenarray.pop();
+        if (token != undefined) {
+          window.clearInterval(token);
+        } else {
+          alert("Pls start the car first!");
+        }
+      }
+    </script>
+</body>
+</html>

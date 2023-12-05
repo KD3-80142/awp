@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Click me" onclick="Distrub()">
+    <script>
+        function Distrub(){
+            alert("Wooo-Hoooo....!");
+
+        }
+        function DoSomething(){
+            console.log("Wating for PCB");
+        }
+    </script>
+    <script>
+        debugger;
+        console.log("hey");
+        var windowcount= window.setTimeout(DoSomething,10000);
+         console.log(windowcount);
+        console.log("hello");
+    </script>
+</body>
+</html>
